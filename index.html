@@ -3,4 +3,27 @@ layout: default
 title: Orlando Del Aguila
 ---
 
-<span>Hello World!</span>
+<header>
+  <p>i'm</p>
+  <h1>Orlando Del Aguila</h1>
+  <img src="http://www.gravatar.com/avatar/34d45f6ceece087d42d88821af59823f?s=250"/>
+  <p>and this is my <a href="{{ base.url }}">personal blog</a></p>
+  <p>you could check my digital life in those links below</p>
+  <div id="icons">
+    <a href="http://www.facebook.com/odelaguila"><img class="icon" src="img/facebook.png"/></a>
+    <a href="http://www.twitter.com/djlandox"><img class="icon" src="img/twitter.png"/></a>
+    <a href="http://www.twitter.com/djlandox"><img class="icon" src="img/twitter.png"/></a>
+  </div>
+  <p>and since your already here</p>
+  <p>read and comment on some of my <a href="#section">posts</a></p>
+</header>
+<section>
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+
+

@@ -40,7 +40,8 @@ a:hover, a:focus{
 
 header,section,footer{
   text-align: center;
-  margin: 0 auto 0 auto;
+  margin: 0 auto 50px auto;
+
 }
 
 header {
