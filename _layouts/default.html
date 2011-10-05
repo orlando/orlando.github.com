@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link href="/css/screen.css" rel="stylesheet" media="screen" type="text/css">
+    <link href="/css/highlight.css?9" rel="stylesheet" type="text/css">
+    <link href='/img/favicon.ico' rel='shortcut icon' type='image/ico'>
+    <!-- google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Andika' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <header>
+      <p>i'm</p>
+      <h1>Orlando Del Aguila</h1>
+      <img src="http://www.gravatar.com/avatar/34d45f6ceece087d42d88821af59823f?s=250"/>
+      <p>and this is my <a href="{{ base.url }}">personal blog</a></p>
+      <p>you could check my digital life in those links below</p>
+      <div id="icons">
+        <a href="http://www.facebook.com/odelaguila"><img class="icon" src="img/facebook.png"/></a>
+        <a href="http://www.twitter.com/djlandox"><img class="icon" src="img/twitter.png"/></a>
+        <a href="http://www.twitter.com/djlandox"><img class="icon" src="img/twitter.png"/></a>
+      </div>
+      <p>and since your already here</p>
+      <p>read and comment on some of my <a href="#section">posts</a></p>
+    </header>
+    <section>
+      {{ content }}
+    </section>
+    <footer>
+      Brief description about my self
+    </footer>
+  </body>
+</html>
+
