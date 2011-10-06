@@ -6,22 +6,34 @@ title: Orlando Del Aguila
 <header>
   <p>i'm</p>
   <h1>Orlando Del Aguila</h1>
-  <img src="http://www.gravatar.com/avatar/34d45f6ceece087d42d88821af59823f?s=250"/>
+  <img class="border" src="http://www.gravatar.com/avatar/34d45f6ceece087d42d88821af59823f?s=250"/>
   <p>and this is my <a href="{{ base.url }}">personal blog</a></p>
-  <p>you could check my digital life in those links below</p>
-  <div id="icons">
-    <a href="http://www.facebook.com/odelaguila"><img class="icon" src="img/facebook.png"/></a>
-    <a href="http://www.twitter.com/djlandox"><img class="icon" src="img/twitter.png"/></a>
-    <a href="http://www.twitter.com/djlandox"><img class="icon" src="img/twitter.png"/></a>
-  </div>
-  <p>and since your already here</p>
+  <p class="topspaced">since your already here</p>
   <p>read and comment on some of my <a href="#section">posts</a></p>
-</header>
+  <p class="botspaced">or first read my brief description below</p>
+
+  <p class="topspaced">i'm a web developer</p>
+  <p>i'm currently studying computer engineer</p>
+  <p>and almost graduated from <a target="_blank" href="http://www.ujap.edu.ve">UJAP</a></p>
+  <p>i work mostly with Ruby and JavaScript</p>
+  <p class="botspaced">but have done some work with C# and VBScript (this last in my intership)</p>
+  <p>i feel very comfortable working with agile methodologies</p>
+  <p class="botspaced">with good pratices like BDD</p>
+
+  <p>if you want to know a lil more about me</p>
+  <p>you could check my <a target="_blank" class="blue" href="resume.pdf">resume</a></p>
+  <p class="botspaced">also could check my digital life in those links below</p>
+  <div id="icons">
+    <a target="_blank" href="http://www.facebook.com/odelaguila"><img class="icon" src="img/facebook.png"/></a>
+    <a target="_blank" href="http://www.twitter.com/djlandox"><img class="icon" src="img/twitter.png"/></a>
+    <a target="_blank" href="http://www.github.com/orlandodelaguila"><img src="img/github.png"/></a>
+  </div>
+ </header>
 <section>
   <h1>Blog Posts</h1>
   <ul class="posts">
     {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li><span>{{ post.date | date_to_string }}</span><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 </section>
