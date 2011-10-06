@@ -3,11 +3,19 @@
   padding: 0;
 }
 
+.centered{
+  text-align:center;
+}
+
+p{
+  text-align:justify;
+}
+
 html, body {
   height: 100%;
-  width:768px;
-  margin:20px auto 0 auto;
-  font: 20px helvetica, arial, clean, sans-serif;
+  width:600px;
+  margin:5px auto 0 auto;
+  font: 18px helvetica, arial, clean, sans-serif;
 }
 
 img.border{
