@@ -6,9 +6,9 @@ layout: default
 </article>
 
 <div id="related">
-  <h2>Related Posts</h2>
+  <h5>Related Posts</h5>  
   <ul class="posts">
-    {% for post in site.related_posts limit:3 %}
+    {% for post in site.related_posts limit:5 %}
       <li><a href="{{ post.url }}">{{ post.title }}</a> | <span>{{ post.date | date_to_string }}</span> </li>
     {% endfor %}
   </ul>

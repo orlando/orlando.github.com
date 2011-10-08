@@ -3,11 +3,18 @@
   padding: 0;
 }
 
+html {
+  background: url("/img/bg3.png");
+  background-position:50% 48%;
+}
+
 #wrapper{
   background:white;
+  font: 18px helvetica, arial, clean, sans-serif;
+  letter-spacing:1px;
   min-height:100px;
   width: 650px;
-  padding:25px;
+  padding:25px 25px 5px 25px;
   margin:25px auto 25px auto;
   border-radius:10px;
   -webkit-border-radius:10px;
@@ -22,22 +29,7 @@
 
 p{
   text-align:justify;
-}
-
-html, body {
-  height: 100%;
-  width:100%;
-  font: 18px helvetica, arial, clean, sans-serif;
-  letter-spacing:1px;
-}
-
-html {
-  background: url("/img/bg3.png");
-  background-position:50% 48%;
-}
-
-img.border{
-  border: 1px solid rgb(51, 51, 51)
+  margin: 0 0 20px 0;
 }
 
 .topspaced{
@@ -47,7 +39,6 @@ img.border{
 .botspaced{
   margin-bottom:15px;  
 }
-
 
 a{
   text-decoration:none;
@@ -59,13 +50,6 @@ a.blue{
   color: rgb(255,0,255);
 }
 
-
-.icon{
-  width:32px; 
-  height:32px;
-  border:0px;
-  margin: 0 10px 0 0;
-}
 .opacity
 {
   -moz-transition: opacity 1.3s ease-in-out;
@@ -80,8 +64,8 @@ a:hover, a:focus{
   transition: opacity 0.3s ease-in-out;
 }
 
-header,section,footer{
-  margin: 0 auto 50px auto;
+header,section{
+  margin: 0 auto 60px auto;
 
 }
 
@@ -91,30 +75,47 @@ header h1{
   color: #FF5028;
   padding:0px;
   font-family: 'Andika', sans-serif;
-  line-height:20px;
+  line-height:16px;
   display:inline-block;
+  margin:0;
 }
 
-header {
+h1{
+  font-size:30px;
+  text-align:center;
+  color: #FF5028;
+  padding:0px;
+  font-family: 'Andika', sans-serif;
+  line-height:16px;
+  max-width:500px;
+  margin:0 auto 50px auto;
 }
 
 header nav{
-  text-align:right;
-  float:right;
+  text-align: right;
+  float: right;
+  line-height: 25px;
+  font-size: 20px;
+  font-style: italic;
 }
 
-header ul{
+header ul, footer ul{
   list-style:none;
 }
-header ul li{
+
+header ul li, footer ul li{
   display:inline;
   margin-right:15px;
 }
 
+footer{
+  text-align:right;
+}
+
 img.me{
   border-color:#414141;
-  margin: 0 0 0 25px;
-  border:1px;
+  margin: 0 0 1px 25px;
+  border:5px;
   float:right;
 }
 
@@ -122,3 +123,14 @@ em{
   color:#252525;
 }
 
+hr{
+  margin:5px 0 5px 0;
+}
+
+h5{
+  margin:0 0 10px 0;
+}
+
+ul.posts{
+  list-style:none;
+}

@@ -2,37 +2,24 @@
 layout: default
 title: Orlando Del Aguila
 ---
-
-<header>
-  <h1>Orlando Del Aguila</h1>
-  <nav>
-    <ul>
-      <li><a target="_blank" href="http://www.facebook.com/odelaguila"><img src="img/facebook.png"/></a></li>
-      <li><a target="_blank" href="http://www.twitter.com/djlandox"><img src="img/twitter.png"/></a></li>
-      <li><a target="_blank" href="http://www.github.com/orlandodelaguila"><img src="img/github.png"/></a></li>
-    </ul>
-  </nav>
-  </header>
-  <img class="me" src="http://www.gravatar.com/avatar/34d45f6ceece087d42d88821af59823f?s=150" />
-  <p class="topspaced">    
-    Hello!, i'm Orlando Del Aguila, and this its my personal page. in the next lines there's a brief about me.
-  </p>
-
-     <p class="topspaced">i'm a web developer, currently studying computer engineer and almost graduated from <a target="_blank" href="http://www.ujap.edu.ve">UJAP</a>.</p>
-     <p class="topspaced">i work mostly with Ruby <em>(Rails and Sinatra)</em> and JavaScript <em>(jQuery)</em> but i have done some work with C# (WP7) and VBScript (Classic ASP) (this last in my intership).</p>
-  <p class="topspaced">
-  i really love to work with agile methodologies, using good techniques like BDD. (i'm not a guru in the subject btw.)
-  </p>
-
-  <p class="topspaced">if you want to know a lil more about me you could check my <a target="_blank" class="blue" href="resume.pdf">resume</a>.</p>
-  <p class="botspaced">also could check my digital life in those links below</p>
-
-
 <section>
-  <h1>Blog Posts</h1>
+  <img class="me" src="http://www.gravatar.com/avatar/34d45f6ceece087d42d88821af59823f?s=150" />
+  <p>    
+    Hello!, i'm Orlando Del Aguila, and i'm a web developer. in the next lines there's a brief about me.
+  </p>
+
+  <p>i live in Valencia-Venezuela, currently studying computer engineer at <a target="_blank" href="http://www.ujap.edu.ve">UJAP</a> and almost graduated from there (9/10 semester). </p>
+  <p>i work mostly with Ruby <em>(Rails and Sinatra)</em> and JavaScript <em>(jQuery)</em> but i have done some work with C# <em>(WP7)</em> and VBScript <em>(Classic ASP)</em> (this last in my intership).</p>
+  <p>
+    i really love to work with agile methodologies, using good techniques like BDD.
+  </p>
+
+  <p>heres my <a target="_blank" href="resume.pdf">resume</a> if you want more details about me.</p>
+
+  <h5>Last Blog Post</h5>
   <ul class="posts">
-    {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% for post in site.posts limit:1 %}
+    <li><span>{{ post.date | date_to_string }} - </span><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 </section>
