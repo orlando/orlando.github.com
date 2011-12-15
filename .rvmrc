@@ -1,1 +1,1 @@
-rvm use ruby-1.9.2-p180@orlandogithub
+rvm --create use 1.9.3@orlandogithub
