@@ -2,3 +2,6 @@ _site/*
 _site
 *.swp
 *.swo
+Gemfile
+Gemfile.lock
+.rvmrc
