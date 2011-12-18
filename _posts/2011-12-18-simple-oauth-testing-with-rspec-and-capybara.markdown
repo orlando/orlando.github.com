@@ -86,31 +86,31 @@ fecha: 18/12/2011
 
 <pre>
   <code class="ruby">
-    class User
-      include Mongoid::Document
-      field :provider, :type => String
-      field :uid, :type => String
-      field :name, :type => String
-      field :email, :type => String
-      field :screen_name, :type => String
-      field :image_url, :type => String
-      field :user_role, :type => String
+  class User
+    include Mongoid::Document
+    field :provider, :type => String
+    field :uid, :type => String
+    field :name, :type => String
+    field :email, :type => String
+    field :screen_name, :type => String
+    field :image_url, :type => String
+    field :user_role, :type => String
 
-      validates_presence_of :name, :uid, :provider
+    validates_presence_of :name, :uid, :provider
 
-      def self.create_with_omniauth(auth)
-        create! do |user|
-          user.provider = auth['provider']
-          user.uid = auth['uid']
-          if auth['info']
-            user.name = auth['info']['name'] || ""
-            user.email = auth['info']['email'] || ""
-            user.screen_name = auth['info']['nickname'] || ""
-            user.image_url = auth['info']['image'] || ""
-          end
+    def self.create_with_omniauth(auth)
+      create! do |user|
+        user.provider = auth['provider']
+        user.uid = auth['uid']
+        if auth['info']
+          user.name = auth['info']['name'] || ""
+          user.email = auth['info']['email'] || ""
+          user.screen_name = auth['info']['nickname'] || ""
+          user.image_url = auth['info']['image'] || ""
         end
       end
     end
+  end
   </code>
 </pre>
 

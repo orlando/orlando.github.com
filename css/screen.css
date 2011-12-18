@@ -10,7 +10,7 @@ html {
 
 #wrapper{
   background:white;
-  font: 18px helvetica, arial, clean, sans-serif;
+  font: 16px helvetica, arial, clean, sans-serif;
   letter-spacing:1px;
   min-height:100px;
   width: 650px;
@@ -63,7 +63,7 @@ header h1{
   color: #FF5028;
   padding:0px;
   font-family: 'Andika', sans-serif;
-  line-height:16px;
+  line-height:20px;
   display:inline-block;
   margin:0;
 }
