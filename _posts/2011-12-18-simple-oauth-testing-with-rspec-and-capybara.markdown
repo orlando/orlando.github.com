@@ -15,14 +15,11 @@ Using [OmniAuth](https://github.com/intridea/omniauth) + [OmniAuth-Twitter](http
 
 now that you have Rspec and Capybara installed, were ready to start with the code. 
   at this point you should have in your config/routes.rb something like this.
-
 {% highlight ruby %} 
 match '/auth/:provider/callback', to: 'sessions#create' 
 {% endhighlight %}
-
 That line will tell OmniAuth what controller should receive the data from twitter (in short.. the callback).
 With that line in place, we could use the helpers that OmniAuth has for testing.. go to your spec/spec\_helper.rb file and add this.
-
 {% highlight ruby %}  
 ...
 RSpec.configure do |config|
@@ -33,11 +30,9 @@ RSpec.configure do |config|
   'uid' => '123545',
 }
 {% endhighlight %}
-
 that tells RSpec that when a test hits 'auth/twitter' OmniAuth will respond with a mockup, this comes really handy because you dont have to use something like FakeWeb to fake the http responses and its a lot easier using the Oauth Build in method.
 
 Since i have some validations in my User model, i have to pass more data in the mock.. do my mock looks something like this
-
 {% highlight ruby %}
 ...
 RSpec.configure do |config|
@@ -50,7 +45,6 @@ RSpec.configure do |config|
 }
 {% endhighlight %}
 my SessionsController and my User model looks something like this
-
 {% highlight ruby %}
 class SessionsController < ApplicationController
 
@@ -101,26 +95,25 @@ class User
   end
 end
 {% endhighlight %}
-
 now we are ready to start testing with Capybara DSL. create a folder called acceptance in your spec directory and a file called something like oauth\_spec.rb
 {% highlight ruby %}
-  require 'rspec'
-  require 'capybara/rspec'
-  
-  feature "OmniAuth" do
+require 'rspec'
+require 'capybara/rspec'
 
-    scenario "should login successfully" do
-      visit '/auth/twitter']
-      page.should have_content("Bienvenido! Orlando") 
-    end
+feature "OmniAuth" do
 
-    scenario "should logout successfully" do
-      visit '/auth/twitter'
-      page.should have_content("Bienvenido! Orlando") 
-      click_on 'Log out'
-      page.should have_content("Vuelve Pronto!") 
-    end
+  scenario "should login successfully" do
+    visit '/auth/twitter']
+    page.should have_content("Bienvenido! Orlando") 
   end
+
+  scenario "should logout successfully" do
+    visit '/auth/twitter'
+    page.should have_content("Bienvenido! Orlando") 
+    click_on 'Log out'
+    page.should have_content("Vuelve Pronto!") 
+  end
+end
 {% endhighlight %}
 
 and the tests should pass, when you call visit '/auth/twitter', OmniAuth will respond with a post to the SessionsController#create method, and that methods redirect to root\_url' with a flash message..
