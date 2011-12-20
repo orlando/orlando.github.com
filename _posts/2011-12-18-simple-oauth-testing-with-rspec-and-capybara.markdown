@@ -7,21 +7,21 @@ fecha: 18/12/2011
 #{{ page.title }}
 #####{{ page.fecha }}
 
-> Today i was looking into Capybara DSL as a replacement to Cucumber, dont get me wrong, i love Cucumber but i want to try something new..
+Today i was looking into Capybara DSL as a replacement to Cucumber, dont get me wrong, i love Cucumber but i want to try something new..
 
-> Using [OmniAuth](https://github.com/intridea/omniauth) + [OmniAuth-Twitter](https://github.com/arunagw/omniauth-twitter) makes oauth with twitter painless. The setup its pretty straight forward, just put this 2 in your Gemfile, bundle install and follow the instructions in the OmniAuth github page, you could check the [RailsApps tutorial](https://github.com/railsapps/rails3-mongoid-omniauth/wiki/Tutorial) if you have any doubt.
+Using [OmniAuth](https://github.com/intridea/omniauth) + [OmniAuth-Twitter](https://github.com/arunagw/omniauth-twitter) makes oauth with twitter painless. The setup its pretty straight forward, just put this 2 in your Gemfile, bundle install and follow the instructions in the OmniAuth github page, you could check the [RailsApps tutorial](https://github.com/railsapps/rails3-mongoid-omniauth/wiki/Tutorial) if you have any doubt.
 
-> [Rspec](https://github.com/rspec/rspec-rails) and [Capybara](https://github.com/jnicklas/capybara) install its a breeze too, just follow the steps in the github page and you will get it running in just a few minutes.
+[Rspec](https://github.com/rspec/rspec-rails) and [Capybara](https://github.com/jnicklas/capybara) install its a breeze too, just follow the steps in the github page and you will get it running in just a few minutes.
 
-> now that you have Rspec and Capybara installed, were ready to start with the code. 
+now that you have Rspec and Capybara installed, were ready to start with the code. 
   at this point you should have in your config/routes.rb something like this.
 
 {% highlight ruby %} 
 match '/auth/:provider/callback', to: 'sessions#create' 
 {% endhighlight %}
 
-> That line will tell OmniAuth what controller should receive the data from twitter (in short.. the callback).
-  With that line in place, we could use the helpers that OmniAuth has for testing.. go to your spec/spec\_helper.rb file and add this.
+That line will tell OmniAuth what controller should receive the data from twitter (in short.. the callback).
+With that line in place, we could use the helpers that OmniAuth has for testing.. go to your spec/spec\_helper.rb file and add this.
 
 {% highlight ruby %}  
 ...
@@ -34,9 +34,9 @@ RSpec.configure do |config|
 }
 {% endhighlight %}
 
-> that tells RSpec that when a test hits 'auth/twitter' OmniAuth will respond with a mockup, this comes really handy because you dont have to use something like FakeWeb to fake the http responses and its a lot easier using the Oauth Build in method.
+that tells RSpec that when a test hits 'auth/twitter' OmniAuth will respond with a mockup, this comes really handy because you dont have to use something like FakeWeb to fake the http responses and its a lot easier using the Oauth Build in method.
 
-  since i have some validations in my User model, i have to pass more data in the mock.. do my mock looks something like this
+Since i have some validations in my User model, i have to pass more data in the mock.. do my mock looks something like this
 
 {% highlight ruby %}
 ...
@@ -49,7 +49,7 @@ RSpec.configure do |config|
   'info' => {'name' => 'Orlando', 'nickname' => 'djlandox'}
 }
 {% endhighlight %}
-> my Sessions controller and my User model looks something like this
+my SessionsController and my User model looks something like this
 
 {% highlight ruby %}
 class SessionsController < ApplicationController
@@ -102,7 +102,7 @@ class User
 end
 {% endhighlight %}
 
-> now we are ready to start testing with Capybara DSL. create a folder called acceptance in your spec directory and a file called something like oauth\_spec.rb
+now we are ready to start testing with Capybara DSL. create a folder called acceptance in your spec directory and a file called something like oauth\_spec.rb
 {% highlight ruby %}
   require 'rspec'
   require 'capybara/rspec'
@@ -123,6 +123,6 @@ end
   end
 {% endhighlight %}
 
-> and the tests should pass, when you call visit '/auth/twitter', OmniAuth will respond with a post to the SessionsController#create method, and that methods redirect to root\_url' with a flash message..
+and the tests should pass, when you call visit '/auth/twitter', OmniAuth will respond with a post to the SessionsController#create method, and that methods redirect to root\_url' with a flash message..
 
 and thats how you easily tests OmniAuth with Capybara and RSpec. :)
