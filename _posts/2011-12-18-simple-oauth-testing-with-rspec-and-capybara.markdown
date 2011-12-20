@@ -95,7 +95,7 @@ class User
   end
 end
 {% endhighlight %}
-now we are ready to start testing with Capybara DSL. create a folder called acceptance in your spec directory and a file called something like oauth\_spec.rb
+with all the code in place, the following tests should be green :), create a folder in your spec directory and a file called something like oauth\_spec.rb
 {% highlight ruby %}
 require 'rspec'
 require 'capybara/rspec'
@@ -115,7 +115,6 @@ feature "OmniAuth" do
   end
 end
 {% endhighlight %}
+when you hit visit '/auth/twitter', OmniAuth will respond with a POST call to the SessionsController#create method, and that methods redirect to root\_url' with a flash message..
 
-and the tests should pass, when you call visit '/auth/twitter', OmniAuth will respond with a post to the SessionsController#create method, and that methods redirect to root\_url' with a flash message..
-
-and thats how you easily tests OmniAuth with Capybara and RSpec. :)
+and thats how you easily test OmniAuth with Capybara and RSpec. :)
