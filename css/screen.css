@@ -13,7 +13,7 @@ html {
   font: 16px helvetica, arial, clean, sans-serif;
   letter-spacing:1px;
   min-height:100px;
-  width: 650px;
+  width: 700px;
   padding:25px 25px 5px 25px;
   margin:25px auto 25px auto;
   border-radius:10px;
@@ -129,6 +129,10 @@ ul.posts{
 
 #disqus_thread{
   font-size:16px;  
+}
+
+.hightlight{
+  font-size:12px;
 }
 
 

@@ -52,7 +52,7 @@ RSpec.configure do |config|
 > my Sessions controller and my User model looks something like this
 
 {% highlight ruby %}
-class SessionsController &lt; ApplicationController
+class SessionsController < ApplicationController
 
   def new
     redirect_to '/auth/twitter'
