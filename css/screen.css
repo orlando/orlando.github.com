@@ -51,7 +51,7 @@ a{
 a:hover, a:focus{
   opacity:0.6;
 }
-
+highlight
 header,section{
   margin: 0 auto 60px auto;
 
@@ -131,7 +131,7 @@ ul.posts{
   font-size:16px;  
 }
 
-.hightlight{
+.highlight{
   font-size:12px;
 }
 
