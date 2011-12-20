@@ -65,7 +65,6 @@ header h1{
   font-family: 'Andika', sans-serif;
   line-height:22px;
   display:inline-block;
-  margin:0;
 }
 
 h1{
@@ -133,6 +132,9 @@ ul.posts{
 
 .highlight{
   font-size:12px;
+  border-radius:5px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
 }
 
 
