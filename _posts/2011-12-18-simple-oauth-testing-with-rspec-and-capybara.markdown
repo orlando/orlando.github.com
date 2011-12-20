@@ -15,109 +15,95 @@ fecha: 18/12/2011
 
 > now that you have Rspec and Capybara installed, were ready to start with the code. 
   at this point you should have in your config/routes.rb something like this.
-<pre>
-  <code class="ruby">
-    match '/auth/:provider/callback', to: 'sessions#create' 
-  </code>
-</pre>
+
+{% highlight ruby %} 
+match '/auth/:provider/callback', to: 'sessions#create' 
+{% endhighlight %}
 
 > That line will tell OmniAuth what controller should receive the data from twitter (in short.. the callback).
   With that line in place, we could use the helpers that OmniAuth has for testing.. go to your spec/spec\_helper.rb file and add this.
 
-<pre>
-  <code class="ruby">
-  ...
-  RSpec.configure do |config|
-  ...
-    OmniAuth.config.test_mode = true
-    OmniAuth.config.mock_auth[:twitter] = {
-    'provider' => 'twitter',
-    'uid' => '123545',
-  }
-  </code>
-</pre>
+{% highlight ruby %}  
+...
+RSpec.configure do |config|
+...
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:twitter] = {
+  'provider' => 'twitter',
+  'uid' => '123545',
+}
+{% endhighlight %}
 
 > that tells RSpec that when a test hits 'auth/twitter' OmniAuth will respond with a mockup, this comes really handy because you dont have to use something like FakeWeb to fake the http responses and its a lot easier using the Oauth Build in method.
 
   since i have some validations in my User model, i have to pass more data in the mock.. do my mock looks something like this
 
-<pre>
-  <code class="ruby">
-  ...
-  RSpec.configure do |config|
-  ...
-    OmniAuth.config.test_mode = true
-    OmniAuth.config.mock_auth[:twitter] = {
-    'provider' => 'twitter',
-    'uid' => '123545',
-    'info' => {'name' => 'Orlando', 'nickname' => 'djlandox'}
-  }
-  </code>
-</pre>
-
+{% highlight ruby %}
+...
+RSpec.configure do |config|
+...
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:twitter] = {
+  'provider' => 'twitter',
+  'uid' => '123545',
+  'info' => {'name' => 'Orlando', 'nickname' => 'djlandox'}
+}
+{% endhighlight %}
 > my Sessions controller and my User model looks something like this
 
-<pre>
-  <code class="ruby">
-  class SessionsController &lt; ApplicationController
+{% highlight ruby %}
+class SessionsController &lt; ApplicationController
 
-    def new
-      redirect_to '/auth/twitter'
-    end
-  
-    def create
-      auth = request.env["omniauth.auth"]
-      user = User.get_user(auth)
-      session[:user_id] = user.id
-      redirect_to root_url, :notice => "Bienvenido! #{user.name.titleize}"
-    end
-
-    def failure
-      redirect_to root_url, :alert => 'Error en el Login'
-    end
-
-    def destroy
-      reset_session
-      redirect_to root_url, :notice => 'Vuelve Pronto!'
-    end
+  def new
+    redirect_to '/auth/twitter'
   end
-  </code>
-</pre>
 
-<pre>
-  <code class="ruby">
-  class User
-    include Mongoid::Document
-    field :provider, :type => String
-    field :uid, :type => String
-    field :name, :type => String
-    field :email, :type => String
-    field :screen_name, :type => String
-    field :image_url, :type => String
-    field :user_role, :type => String
+  def create
+    auth = request.env["omniauth.auth"]
+    user = User.get_user(auth)
+    session[:user_id] = user.id
+    redirect_to root_url, :notice => "Bienvenido! #{user.name.titleize}"
+  end
 
-    validates_presence_of :name, :uid, :provider
+  def failure
+    redirect_to root_url, :alert => 'Error en el Login'
+  end
 
-    def self.create_with_omniauth(auth)
-      create! do |user|
-        user.provider = auth['provider']
-        user.uid = auth['uid']
-        if auth['info']
-          user.name = auth['info']['name'] || ""
-          user.email = auth['info']['email'] || ""
-          user.screen_name = auth['info']['nickname'] || ""
-          user.image_url = auth['info']['image'] || ""
-        end
+  def destroy
+    reset_session
+    redirect_to root_url, :notice => 'Vuelve Pronto!'
+  end
+end
+  
+class User
+  include Mongoid::Document
+  field :provider, :type => String
+  field :uid, :type => String
+  field :name, :type => String
+  field :email, :type => String
+  field :screen_name, :type => String
+  field :image_url, :type => String
+  field :user_role, :type => String
+
+  validates_presence_of :name, :uid, :provider
+
+  def self.create_with_omniauth(auth)
+    create! do |user|
+      user.provider = auth['provider']
+      user.uid = auth['uid']
+      if auth['info']
+        user.name = auth['info']['name'] || ""
+        user.email = auth['info']['email'] || ""
+        user.screen_name = auth['info']['nickname'] || ""
+        user.image_url = auth['info']['image'] || ""
       end
     end
   end
-  </code>
-</pre>
+end
+{% endhighlight %}
 
 > now we are ready to start testing with Capybara DSL. create a folder called acceptance in your spec directory and a file called something like oauth\_spec.rb
-
-<pre>
-  <code class="ruby">
+{% highlight ruby %}
   require 'rspec'
   require 'capybara/rspec'
   
@@ -135,18 +121,8 @@ fecha: 18/12/2011
       page.should have_content("Vuelve Pronto!") 
     end
   end
-  </code>
-</pre>
+{% endhighlight %}
 
 > and the tests should pass, when you call visit '/auth/twitter', OmniAuth will respond with a post to the SessionsController#create method, and that methods redirect to root\_url' with a flash message..
 
 and thats how you easily tests OmniAuth with Capybara and RSpec. :)
-
-<pre>
-  <code class="ruby">
-  class Test
-  end
-  </code>
-</pre>
-
-
