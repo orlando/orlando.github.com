@@ -30,9 +30,9 @@ RSpec.configure do |config|
   'uid' => '123545',
 }
 {% endhighlight %}
-that tells RSpec that when a test hits 'auth/twitter' OmniAuth will respond with a mockup, this comes really handy because you dont have to use something like FakeWeb to fake the http responses and its a lot easier using the Oauth Build in method.
+that tells RSpec that when a test hits 'auth/twitter' OmniAuth will respond with a mockup, this comes really handy because you dont have to use something like FakeWeb to fake the http responses and its a lot easier using the OmniAuth's Build in methods.
 
-Since i have some validations in my User model, i have to pass more data in the mock.. do my mock looks something like this
+Since i have some validations in my User model, i have to pass more data in the mock.. so my mock looks something like this
 {% highlight ruby %}
 ...
 RSpec.configure do |config|
@@ -103,7 +103,7 @@ require 'capybara/rspec'
 feature "OmniAuth" do
 
   scenario "should login successfully" do
-    visit '/auth/twitter']
+    visit '/auth/twitter'
     page.should have_content("Bienvenido! Orlando") 
   end
 
