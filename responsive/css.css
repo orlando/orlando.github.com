@@ -1,0 +1,14 @@
+body,html{ margin:0; padding:0; height:100%;width:100%;background:grey}
+#mini-container{width:90%; margin:auto; max-width:900px}
+#img{width:77.777777778%}
+#hora{width:22.222222222%; background:blue}
+#img,#hora{float:left;}
+
+img{
+  max-width:100%;
+}
+
+@media screen and (max-width:600px){
+	#img,#hora{width:100%}
+  #hora{text-align:center}
+}/*/mediaquery*/
