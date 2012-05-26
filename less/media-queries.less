@@ -4,12 +4,33 @@
 
 /* Phones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
-/* Styles */
+  header{
+    #name{
+      font-size:4.5em;
+    }
+  }
 }
 
 /* Phones (landscape) ----------- */
 @media only screen and (max-width : 480px) {
-/* Styles */
+  header{
+    nav{
+      ul{
+        li{
+          a{
+            font-size:1.8em;
+          }
+        }
+      }
+    }
+  }
+  #content{
+    section{
+      p{
+        font-size:1.8em;
+      }
+    }
+  }
 }
 
 /* Nav Breakpoint */
@@ -50,4 +71,21 @@
 /* Big Desktop ----------- */
 @media only screen and (min-width : 1600px) {
 /* Styles */
+}
+/* Breakpoint----------- */
+@media only screen and (max-width : 300px) {
+  header{
+    #name{
+      font-size:4em;
+    }
+    nav{
+      ul{
+        li{
+          a{
+            font-size:1.5em;
+          }
+        }
+      }
+    }
+  }
 }
