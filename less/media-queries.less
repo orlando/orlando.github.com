@@ -2,6 +2,52 @@
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-	/* Style adjustments for viewports that meet the condition */
+/* Phones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+}
+
+/* Phones (landscape) ----------- */
+@media only screen and (max-width : 480px) {
+/* Styles */
+}
+
+/* Nav Breakpoint */
+@media screen and (max-width: 850px) {
+  header{
+    margin-bottom:50px;
+    nav, #name,.social{
+      float:none;
+      width:100%;
+      text-align:center
+    }
+    nav{
+      margin:-5px auto 10px;
+    }
+  }
+}
+
+/* Tables (portrait) ----------- */
+@media only screen and (max-width : 768px){
+  #wrapper{
+    width:100%;
+  }
+
+  #content{
+    section{
+      h1,p{
+        margin:0.5em auto;
+      }
+    }
+  }
+}
+
+/* Tables (landscape) ----------- */
+@media only screen and (max-width : 1024px) {
+/* Styles */
+}
+
+/* Big Desktop ----------- */
+@media only screen and (min-width : 1600px) {
+/* Styles */
 }
