@@ -1,0 +1,112 @@
+!!!
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8" lang="en">
+/[if IE 8] <html class="no-js lt-ie9" lang="en">
+/ [if gt IE 8]><!
+%html.no-js{:lang => "en"}
+  / <![endif]
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %title Orlando Del Aguila
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "", :name => "author"}
+    -# %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}
+    %meta{:content => "width=device-width", :name => "viewport"}
+    %link{:href => "less/style.less", :rel => "stylesheet/less"}
+    %script{:src => "js/libs/less-1.3.0.min.js"}
+    %script{:src => "/js/libs/jquery-1.7.2.min.js"}
+    %script{:src => "/js/libs/jquery-ui-1.8.7.custom.min.js"}
+    %script{:src => "/js/libs/jquery.slideto.min.js"}
+    %script{:src => "js/libs/modernizr-2.5.3.min.js"}
+    %script{:src => "/js/script.js"}
+    -# %script{:src => "http://use.typekit.com/xuv8xdy.js", :type => "text/javascript"}
+    -# :javascript
+    -#   try{Typekit.load();}catch(e){}
+  %body
+    #wrapper
+      %header
+        .social
+          %a{:href => "http://www.twitter.com/odelaguila", :target => "_BLANK"}
+            %img.icon{:src => "/img/twitter.png"}
+          %a{:href => "http://www.github.com/orlandodelaguila", :target => "_BLANK"}
+            %img.icon{:src => "/img/github.png"}
+        .clear
+        .row
+          #name
+            %span.first
+              Orlando
+            %span.last
+              Del Aguila
+          %nav
+            %ul
+              %li
+                %a.about.museo{:href => "about"}
+                  ABOUT
+              %li
+                %a.work.museo{:href => "work"}
+                  WORK
+              %li
+                %a.talks.museo{:href => "talks"}
+                  TALKS
+              %li
+                %a.other.museo{:href => "other"}
+                  OTHER
+          .clear
+          .separator
+      #content{:role => "main"}
+        %section#about
+          .top_border
+          %h1
+            ABOUT
+          .img
+            %img{:src => "/img/me.jpg"}
+          %p
+            Hello :), i'm 
+            %strong
+              Orlando Del Aguila. 
+            I live in Valencia, Venezuela and i'm a web developer, i mostly work using Ruby and JavaScript/CoffeScript with frameworks like Rails, Sinatra or/and Backbone.js, also i do some frontend development, so i got in my toolbox stuff like sass or haml.
+          %p
+            Just now i finished my Bachelor in Computer Enginering, and looking forward to do masters in data mining.
+          %p
+            Currently i work for 
+            %a{:href => "http://www.bakedweb.net"} Bakedweb,
+            a Design and Web Development shop based in Downtown Miami, Fl. When im not doing that, i read a lot about programming, hangout why my girl or try to do some blogging.
+
+            if you want to hear more about me, 
+            %span.line-throught
+              can't even imagine why
+            check my
+            %a{:href => "http://www.twitter.com/odelaguila"} Twitter
+
+        %section#work
+          .top_border
+          %h1
+            WORK
+          %p
+            You could check my work at 
+            %a{:href => "http://www.github.com/orlandodelaguila"} Github.
+            I'm not a hardcore open source programmer, but i promise that i'll throw more projects in there :).
+
+        %section#talks
+          .top_border
+          %h1
+            TALKS
+          %p
+            i really enjoy to share my knowledge with people
+            %span.line-throught
+              not that I know that much :), 
+            and i give talks whenever it's possible. i have some
+            %span.line-throught
+              2
+            slides in
+            %a{:href => "https://speakerdeck.com/u/orlando"} SpeakerDeck.
+            give them a look
+
+        %section#other  
+          .top_border
+          %h1
+            OTHER
+          %p
+            Other Stuff goes here
+      %footer
