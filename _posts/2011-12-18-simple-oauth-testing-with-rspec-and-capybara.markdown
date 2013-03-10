@@ -1,12 +1,9 @@
 ---
 layout: post
 title: Simple oauth testing with Rspec and Capybara
-fecha: 18/12/2011
+date: December 18, 2011
+category: code
 ---
-
-#{{ page.title }}
-#####{{ page.fecha }}
-
 Today i was looking into Capybara DSL as a replacement to Cucumber, dont get me wrong, i love Cucumber but i want to try something new..
 
 Using [OmniAuth](https://github.com/intridea/omniauth) + [OmniAuth-Twitter](https://github.com/arunagw/omniauth-twitter) makes oauth with twitter painless. The setup its pretty straight forward, just put this 2 in your Gemfile, bundle install and follow the instructions in the OmniAuth github page, you could check the [RailsApps tutorial](https://github.com/railsapps/rails3-mongoid-omniauth/wiki/Tutorial) if you have any doubt.

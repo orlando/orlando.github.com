@@ -1,0 +1,9 @@
+<article class="post">
+  <h1>{{ post.title }}</h1>
+
+  {% if content %}
+    {{ content }}
+  {% else %}
+    {{ post.content }}
+  {% endif %}
+</article>

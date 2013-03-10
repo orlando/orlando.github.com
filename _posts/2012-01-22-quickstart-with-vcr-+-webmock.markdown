@@ -1,11 +1,9 @@
 ---
 layout: post
 title: Quickstart with VCR + WebMock + Rspec
-fecha: 22/01/2012
+date: January 22, 2012
+category: code
 ---
-
-#{{ page.title }}
-#####{{ page.fecha }}
 
 Right now im working in a gem called Rubytrick, its a wrapper for the[Hattrick's](http://www.hattrick.org) CHPP API. Hattrick is a Web soccer simulation game. its pretty fun actually, and can became quickly part of your daily internet life (like Facebook or Twitter).
 
@@ -77,7 +75,7 @@ describe Rubytrick::HT, 'Fans' do
     @session.fans.respond_to?(:pull_data).should be_true
   end
 
-  it 'should retrieve data from hattrick already parsed with Nori (returns a hash with snake_cased keys instead of xml)' do
+  it 'should retrieve data from hattrick already parsed' do
     @session.fans.data.should_not == nil
     @session.fans.data.class.should == Hash
     @session.fans.data[:file_name].should == 'fans.xml'

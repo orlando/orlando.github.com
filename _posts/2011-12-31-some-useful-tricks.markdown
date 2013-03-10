@@ -1,11 +1,9 @@
 ---
 layout: post
 title: Some useful tricks
-fecha: 31/12/2011
+date: December 31, 2011
+category: code
 ---
-
-#{{ page.title }}
-#####{{ page.fecha }}
 
 Today i was looking for a easy way to push to multiple git repos.. a quick look at [stackoverflow](http://stackoverflow.com/a/3195446/536984) answered my question.
 
@@ -18,7 +16,7 @@ git remote add origin git@github.com:orlandodelaguila/orlandodelaguila.github.co
 
 then open your .git/config file and look at it.. should look like this one.
 
-{% highlight bash %}
+```bash
 [core]
 	repositoryformatversion = 0
 	filemode = true
@@ -30,7 +28,7 @@ then open your .git/config file and look at it.. should look like this one.
 [remote "hashlabs"]
 	url = git@git.hashlabs.com:orlandodelaguila.github.com.git
   fetch = +refs/heads/*:refs/remotes/hashlabs/*
-{% endhighlight %}
+```
 
 fire up vim and add another remote that includes multiple urls.. like this
 

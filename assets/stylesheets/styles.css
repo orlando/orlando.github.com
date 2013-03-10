@@ -1,0 +1,209 @@
+a, a:visited, a:hover, a:active {
+  text-decoration:none !important;
+  color: inherit;
+}
+
+html,body,div.unit, div.columns{
+  height:100%;
+  width:100%;
+}
+
+div#header{
+  height:100%;
+  width:26%;
+  padding-top:30px;
+}
+
+div#header header#sidebar {
+  padding-left: 3%;
+}
+div#header header#sidebar figure.logo {
+  position:relative;
+  width: 200px;
+  height: 200px;
+  background-color: #F40000;
+  margin:0;
+  border-radius: 50%;
+}
+
+div#header header#sidebar figure.logo a{
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  text-indent: -9999px;
+  border: 5px solid #fff;
+  background-size: 100%;
+  background-image: url(/assets/images/me.png);
+}
+
+div#header header#sidebar a{
+}
+
+div#header header#sidebar p {
+  font-size: 15px;
+  line-height: 23px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #4d4d4d;
+  font-family: 'proxima-nova',sans-serif;
+  font-weight: 400;
+}
+
+div#header header#sidebar h1,h2{
+  font-family: 'freight-sans-pro','helvetica',sans-serif;
+}
+
+div#header header#sidebar h1{
+  margin: 5px 0;
+  color: #000000;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+div#header header#sidebar ul#user_nav{
+  position: relative;
+  margin-top: 25px;
+}
+
+div#header header#sidebar ul#user_nav li{
+  list-style: none;
+}
+
+
+div#header header#sidebar ul#user_nav li a{
+  position: relative;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 25px;
+  border: 4px solid #f8f8f8;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  z-index: 5;
+  padding: 0 10px;
+  color: #999;
+  margin-left: -30px;
+  font-weight: 600;
+  background-color: #fff;
+  margin-bottom: 12px;
+}
+
+div#header header#sidebar ul#user_nav li a:hover{
+  background:red;
+  color:white;
+}
+
+div#header header#sidebar h2{
+  letter-spacing: 1px;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #585858;
+}
+
+div#header div.container{
+  height:100%;
+  width:100%;
+  padding-left:10%;
+}
+
+div#content{
+  height:100%;
+}
+
+div#content div.container{
+  height:100%;
+}
+
+header.post-header{
+  border-left: 1px solid #e3e3e3;
+  padding: 40px 40px 40px 50px;
+}
+
+header.post-header time{
+  display: block;
+  font-family: "freight-sans-pro",sans-serif;
+  position: relative;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 23px;
+}
+
+div#content section.content article{
+  padding: 40px 40px 40px 50px;
+  border-top: 1px solid #e3e3e3;
+  border-left: 1px solid #e3e3e3;
+}
+
+div#content section.content article h1,
+div#content section.content article h2,
+div#content section.content article h3,
+div#content section.content article h4,
+div#content section.content article h5{
+  font-family: 'proxima-nova',sans-serif;
+  max-width: 600px;
+}
+
+div#content section.content article h1{
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+div#content section.content article div.highlight{ 
+  border: none;
+  display: block;
+  border: 1px solid #d2d2d2;
+  background-color: #f8f8f8;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 13px;
+  margin-left: -50px;
+  margin-right: 0;
+  width: auto;
+  border-left: none;
+  border-right: none;
+  padding-left: 50px;
+}
+
+div#content section.content article h2{
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+div#content section.content article h2 a{
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #CCC;
+  font-family: "freight-sans-pro",sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  -webkit-font-smoothing: antialiased;
+}
+
+div#content section.content article.post > p {
+  max-width: 600px;
+  font-size: 17px;
+  line-height: 27px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #4d4d4d;
+  font-family: 'proxima-nova',sans-serif;
+  font-weight: 400;
+}
+
+div#content section.content article.post > p:nth-child(2) {
+  font-size: 20px;
+  line-height: 30px;
+  color: #373737;
+}
