@@ -7,7 +7,7 @@ category: code
 
 Today i was looking for a easy way to push to multiple git repos.. a quick look at [stackoverflow](http://stackoverflow.com/a/3195446/536984) answered my question.
 
-once you create your local git repo, add some remotes.
+once you create your `local` git repo, add some remotes.
 
 {% highlight bash %} 
 git remote add hashlabs git@git.hashlabs.com:orlandodelaguila.github.com.git
