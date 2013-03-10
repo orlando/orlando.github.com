@@ -1,4 +1,6 @@
 window.Kudos = function Kudos(config){
+    this.instances = [];
+
     this.init = function init(config){
         var instance = this;
         this.kudosCount = 0;
@@ -14,6 +16,8 @@ window.Kudos = function Kudos(config){
                 instance[property] = config[property];
             }
         }
+
+        window.Kudos.instances.push(this);
 
         if(!this.element){
             this.element = $(Kudos.HTML);
@@ -39,8 +43,10 @@ window.Kudos = function Kudos(config){
         return this
     }
 
-    this.init(config)
+    this.init.apply(this, arguments);
 }
+
+window.Kudos.instances = [];
 
 window.Kudos.HTML =
     '<figure class="kudo able" id="">\
@@ -68,13 +74,15 @@ window.Kudos.prototype = {
     },
 
     destroy: function(){
+        var kudo = this;
         this.name = null;
         this.timer = null;
-        this.element && this.element.remove();
+        this.fillingElement = null;
         this.id = null;
-        for (property in config){
-            if (instance.hasOwnProperty(property) && property !== 'prototype'){
-                instance[property] = null;
+        this.element && this.element.remove();
+        for (property in this){
+            if (this.hasOwnProperty(property)){
+                this[property] = null;
             }
         }
     },
@@ -121,6 +129,10 @@ window.Kudos.prototype = {
                 kudos.send();
             }
         });
+    },
+
+    _fetchCount: function(){
+        // to be implemented
     },
 
     _setCount: function(){

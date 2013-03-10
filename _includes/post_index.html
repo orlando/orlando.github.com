@@ -9,7 +9,7 @@
   {% if page.kudos %}
     <script>
       $(function() {
-        (new Kudos({name:""+new Date().getTime(), id:"{{post.customid}}"})).render($("article#{{post.customid}}"));
+        (new Kudos({name:"kudos_"+ Math.floor(new Date().getTime() * Math.random()), id:"{{post.customid}}"})).render($("article#{{post.customid}}"));
       });
     </script>
   {% endif %}

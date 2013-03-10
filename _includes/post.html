@@ -24,7 +24,7 @@
   {% if post.kudos %}
     <script>
       $.function(){
-        (Kudos({name:""+new Date().getTime(), id:"{{post.id}}"})).render($("article#{{post.customid}}"));
+        (Kudos({name:"kudos_"+ Math.floor(new Date().getTime() * Math.random()), id:"{{post.customid}}"})).render($("article#{{post.customid}}"));
       }
     </script>
   {% endif %}
