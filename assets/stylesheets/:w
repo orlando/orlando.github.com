@@ -1,7 +1,0 @@
-html,body,div#unit{
-  height:100%;
-  width:100%;
-}
-div#header-container{
-  width:26%;
-}
