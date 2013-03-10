@@ -14,11 +14,10 @@
       {% else %}
         {% capture date_format %}%A, %B %e{% endcapture %}
       {% endif %}
-      <time pubdate datetime="{{ post.date | html_global_date }}">{{ post.date | date: date_format }}</time>
       {% if post.source %}
         <a class="icon" href="{{ post.source }}" title="{{ post.title }}" rel="external">Source</a>
       {% else %}
-      <a class="icon" href="http://www.instapaper.com/hello2?u={{ site.url | url_encode }}{{ post.url | url_encode }}&amp;title={{ post.title | url_encode }}" rel="alternate" title="Save to Instapaper">Read Later</a>
+      <a class="instapaper" href="http://www.instapaper.com/hello2?u={{ site.url | url_encode }}{{ post.url | url_encode }}&amp;title={{ post.title | url_encode }}" rel="alternate" title="Save to Instapaper">Read Later</a>
       {% endif %}
     </p>
   </footer>

@@ -26,18 +26,17 @@ typekit_url: //use.typekit.net/ega8emb.js
     <meta property="og:site_name">
     <meta property="og:fb:app_id">
     <meta property="og:description" content="Orlando Del Aguila Blog">
-    <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/orlandodelaguila/blog">
+    <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/orlandodelaguila/blog"/>
     <!-- libraries -->
-    <link rel="stylesheet" media="all" type="text/css" href="/assets/stylesheets/elastic.css">
-    <link rel="stylesheet" media="print" type="text/css" href="/assets/stylesheets/elastic.print.css">
-    <link rel="stylesheet" media="screen" type="text/css" href="/assets/stylesheets/styles.css">
-    <link rel="stylesheet" media="screen" type="text/css" href="/assets/stylesheets/github.css">
+    <link rel="stylesheet" media="screen" type="text/css" href="/assets/stylesheets/reset.css"/>
+    <link rel="stylesheet" media="screen" type="text/css" href="/assets/stylesheets/styles.css"/>
+    <link rel="stylesheet" media="screen" type="text/css" href="/assets/stylesheets/github.css"/>
     <script data-cfasync="false" type="text/javascript" src="{{page.typekit_url}}"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
   <body style="zoom: 1;">
     <div class="unit">
-      <div class="same-height columns">
+      <div class="same-height columns adaptive-250-760">
         <div id="header" class="column fixed left">
           <div class="container">
             <header id="sidebar">
@@ -68,7 +67,18 @@ typekit_url: //use.typekit.net/ega8emb.js
       </div>
     </div>
     <script src="/assets/javascripts/jquery.min.js"></script>
-    <script src="/assets/javascripts/elastic.js"></script>
     <script src="/assets/javascripts/js.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-39156020-1']);
+      _gaq.push(['_setDomainName', 'delagui.la']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
   </body>
 </html>
