@@ -15,8 +15,8 @@ div#header{
 }
 
 div#header header#sidebar {
-  padding-left: 3%;
 }
+
 div#header header#sidebar figure.logo {
   position:relative;
   width: 200px;
@@ -60,7 +60,8 @@ div#header header#sidebar h1,h2{
 }
 
 div#header header#sidebar h1{
-  margin: 5px 0;
+  margin:0;
+  margin-top: 15px;
   color: #000000;
   font-size: 30px;
   line-height: 30px;
@@ -100,6 +101,8 @@ div#header header#sidebar ul#user_nav li a:hover{
 }
 
 div#header header#sidebar h2{
+  margin:0;
+  margin-top: 10px;
   letter-spacing: 1px;
   font-size: 13px;
   line-height: 16px;
