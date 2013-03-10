@@ -1,7 +1,8 @@
 /* defaults */
-a, a:visited, a:hover, a:active {
-  text-decoration:none !important;
-  color: inherit;
+a, a:visited {
+  color: #333;
+  text-decoration: none;
+  outline: 0;
 }
 
 html,body,div.unit, div.columns{
@@ -168,6 +169,14 @@ div#header{
     padding: 40px 0px 40px 50px;
     border-top: 1px solid #e3e3e3;
   }
+
+  div#content section.content article a.title, a.title:visited {
+    text-decoration: none;
+  }
+  div#content section.content article a, a:visited {
+    text-decoration: underline;
+  }
+  
 
   div#content section.content article p > code{
     border-radius: 15px;
