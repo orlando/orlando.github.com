@@ -3,6 +3,7 @@ layout: post
 title: Simple oauth testing with Rspec and Capybara
 date: December 18, 2011
 category: code
+customid: orlando-wLVzWsUhmpqVMbJ
 ---
 Today i was looking into Capybara DSL as a replacement to Cucumber, dont get me wrong, i love Cucumber but i want to try something new..
 

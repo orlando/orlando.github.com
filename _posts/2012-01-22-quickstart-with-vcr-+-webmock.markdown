@@ -3,6 +3,7 @@ layout: post
 title: Quickstart with VCR + WebMock + Rspec
 date: January 22, 2012
 category: code
+customid: orlando-pPpCra5BZ8xvSF6
 ---
 
 Right now im working in a gem called Rubytrick, its a wrapper for the[Hattrick's](http://www.hattrick.org) CHPP API. Hattrick is a Web soccer simulation game. its pretty fun actually, and can became quickly part of your daily internet life (like Facebook or Twitter).

@@ -1,4 +1,4 @@
-<article class="post">
+<article class="post" id="{{post.customid}}">
   <h1>{{ post.title }}</h1>
   {% if content %}
     {{ content }}
@@ -21,4 +21,11 @@
       {% endif %}
     </p>
   </footer>
+  {% if post.kudos %}
+    <script>
+      $.function(){
+        (Kudos({name:""+new Date().getTime(), id:"{{post.id}}"})).render($("article#{{post.customid}}"));
+      }
+    </script>
+  {% endif %}
 </article>

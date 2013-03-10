@@ -3,6 +3,7 @@ layout: post
 title: Some useful tricks
 date: December 31, 2011
 category: code
+customid: orlando-yJAt8snjeQCy9YH
 ---
 
 Today i was looking for a easy way to push to multiple git repos.. a quick look at [stackoverflow](http://stackoverflow.com/a/3195446/536984) answered my question.

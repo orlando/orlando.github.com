@@ -6,6 +6,8 @@ email_with_subject: mailto:orlando@delagui.la?subject=hi
 twitter: odelaguila
 feed_url: http://feeds.feedburner.com/orlandodelaguila/blog
 typekit_url: //use.typekit.net/ega8emb.js
+kudos: true
+kudos-url: ""
 ---
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
@@ -33,6 +35,18 @@ typekit_url: //use.typekit.net/ega8emb.js
     <link rel="stylesheet" media="screen" type="text/css" href="/assets/stylesheets/github.css"/>
     <script data-cfasync="false" type="text/javascript" src="{{page.typekit_url}}"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    {% if page.kudos %}
+      <link rel="stylesheet" media="screen" type="text/css" href="/assets/stylesheets/kudos.css"/>
+      <script data-cfasync="false" src="/assets/javascripts/jquery.min.js"></script>
+      <script data-cfasync="false" type="text/javascript" src="/assets/javascripts/kudos.js"></script>
+      {% if page.kudos-url %}
+      <script>
+        $(function() {
+          Kudos.KudoURL = "{{page.kudos-url}}";
+        });
+      </script>
+      {% endif %}
+    {% endif %}
   </head>
   <body style="zoom: 1;">
     <div class="unit">
@@ -66,7 +80,6 @@ typekit_url: //use.typekit.net/ega8emb.js
         </div>
       </div>
     </div>
-    <script src="/assets/javascripts/jquery.min.js"></script>
     <script src="/assets/javascripts/js.js"></script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
