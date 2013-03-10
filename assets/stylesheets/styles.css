@@ -326,6 +326,7 @@ div#content section.content article.post a.instapaper {
   }
 
   div#header header#sidebar ul#user_nav{
+    margin-top:0;
     padding:0;
   }
 
