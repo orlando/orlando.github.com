@@ -123,7 +123,7 @@ div#content div.container{
 
 header.post-header{
   border-left: 1px solid #e3e3e3;
-  padding: 40px 0px 40px 50px;
+  padding: 40px 0px 40px 40px;
 }
 
 header.post-header time{
