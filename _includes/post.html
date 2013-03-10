@@ -23,9 +23,9 @@
   </footer>
   {% if post.kudos %}
     <script>
-      $.function(){
-        (Kudos({name:"kudos_"+ Math.floor(new Date().getTime() * Math.random()), id:"{{post.customid}}"})).render($("article#{{post.customid}}"));
-      }
+      $(function() {
+        (new Kudos({name:"kudos_"+ Math.floor(new Date().getTime() * Math.random()), id:"{{post.customid}}"})).render($("article#{{post.customid}}"));
+      });
     </script>
   {% endif %}
 </article>
