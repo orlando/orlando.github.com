@@ -42,6 +42,7 @@ div#header{
   }
 
   div#header header#sidebar figure.logo a{
+    margin:0;
     display: block;
     position: absolute;
     top: 10px;

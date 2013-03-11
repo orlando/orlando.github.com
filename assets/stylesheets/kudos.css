@@ -27,6 +27,9 @@ figure.kudo a {
   cursor: default;
 }
 
+figure.kudo{
+  margin:0;
+}
 figure.kudo div.filling {
   position: absolute;
   background-color: #000;
