@@ -10,6 +10,6 @@ The other day browsing around my rss feed, i saw that [Steve Klabnik](http://twi
 
 i really like the design, so i cloned it for my Jekyll based page, you can take a look at [repo](http://github.com/orlando/orlando.github.com). All configurations are located at the `base.html` file header, you can set all your parameters there.
 
-The "Kudos" button uses `localStorage` to keep track of when the user already "kudoed" the post or not, also you can pass an url parameter, so after the user "Kudos" your post it will send an ajax `POST` with the id of the post.. those id are grabbed from the post `customid` parameter, i need to look for a better way to handle this.
+The "Kudos" button uses `localStorage` to track if the user already "kudoed" a post or not, also you can pass an url parameter so after the user "Kudos" a post, it will send an ajax `POST` request with the post id. Those id are grabbed from the post `customid` parameter, i need to look for a better way to handle this.
 
 there's still a lot missing (like grab the kudo number from an external app) but i will clean the code and add the missing functionality later this week. (off course pull requests are so much welcome <3)
