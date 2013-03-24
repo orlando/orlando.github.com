@@ -7,11 +7,13 @@ window.Kudos = function Kudos(config){
         this.inText  = "Don't Move";
         this.outText  = "Kudos";
         this.element = null;
-        this.id = null;
+        this.articleId = null;
+        this.articleTitle = null;
+        this.articleUrl = null;
         this.className = null;
         this.name = null;
 
-        for (property in config){
+        for (property in config) {
             if (instance.hasOwnProperty(property) && property !== 'prototype'){
                 instance[property] = config[property];
             }
@@ -66,7 +68,7 @@ window.Kudos.prototype = {
         if(window.Kudos.KudoURL){
             $.ajax({
               url: window.Kudos.KudoURL,
-              data: {id: kudo.id},
+              data: {article: kudo.articleId, title: kudo.articleTitle, url: kudo.articleUrl},
               type: "POST",
               dataType: "json"
             })
