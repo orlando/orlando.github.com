@@ -1,7 +1,7 @@
 window.Kudos = function Kudos(config){
     this.instances = [];
 
-    this.init = function init(config){
+    this.init = function init (config) {
         var instance = this;
         this.kudosCount = 0;
         this.inText  = "Don't Move";
@@ -39,10 +39,10 @@ window.Kudos = function Kudos(config){
         } else{
             this._bindEvents();
         }
-
+        this._fetchCount();
         this._setCount();
 
-        return this
+        return this;
     }
 
     this.init.apply(this, arguments);
@@ -61,6 +61,18 @@ window.Kudos.HTML =
     '
 // set this to send kudos POST requests to this URL
 window.Kudos.KudoURL = null;
+window.Kudos.fetchCount = function () {
+    if(window.Kudos.KudoURL){
+        $.ajax({
+          url: window.Kudos.KudoURL,
+          type: "GET",
+          dataType: "json",
+          async    : false
+        }).done(function ( kudoData ) {
+            window.Kudos.kudoData = kudoData;
+        });
+    }
+};
 
 window.Kudos.prototype = {
     send: function send(){
@@ -134,7 +146,13 @@ window.Kudos.prototype = {
     },
 
     _fetchCount: function(){
-        // to be implemented
+        var kudo = this;
+        var item = window.Kudos.kudoData.filter(function (item) {
+            return item.article === kudo.articleId
+        })[0];
+        if (item) {
+            this.kudosCount = item.kudoCount;
+        }
     },
 
     _setCount: function(){
