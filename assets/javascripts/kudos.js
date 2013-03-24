@@ -28,7 +28,7 @@ window.Kudos = function Kudos(config){
         this.fillingElement = this.element.find('div.filling');
 
         this.element.addClass(this.className);
-        this.element.attr('id',this.id);
+        this.element.attr('id',this.articleId);
 
         if(this._isAlreadyKudoed()){
             this.element.addClass('completed');
@@ -92,7 +92,9 @@ window.Kudos.prototype = {
         this.name = null;
         this.timer = null;
         this.fillingElement = null;
-        this.id = null;
+        this.articleId = null;
+        this.articleTitle = null;
+        this.articleUrl = null;
         this.element && this.element.remove();
         for (property in this){
             if (this.hasOwnProperty(property)){
@@ -113,7 +115,7 @@ window.Kudos.prototype = {
         this.element.off();
         this.kudosCount = this.kudosCount + 1;
         if(window.localStorage){
-            window.localStorage[this.id] = this.kudosCount;
+            window.localStorage[this.articleId] = this.kudosCount;
         }
         this.element.find('div.num').text(this.kudosCount).show();
         this.element.find('div.txt').text(this.outText);
@@ -160,8 +162,8 @@ window.Kudos.prototype = {
     },
 
     _isAlreadyKudoed: function(){
-        if(window.localStorage && !!localStorage[this.id]){
-            return localStorage[this.id]
+        if(window.localStorage && !!localStorage[this.articleId]){
+            return localStorage[this.articleId]
         }
     }
 }
