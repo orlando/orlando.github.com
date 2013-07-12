@@ -26,6 +26,9 @@ div#header{
   padding-top:30px;
 }
 
+strong, b {
+  font-weight: bold;
+}
 
 /* sidebar */
 
@@ -169,6 +172,10 @@ div#header{
     position:relative;
     padding: 40px 0px 40px 50px;
     border-top: 1px solid #e3e3e3;
+  }
+
+  #content section.content article div {
+    max-width:90%;
   }
 
   div#content section.content article a.title, a.title:visited {
