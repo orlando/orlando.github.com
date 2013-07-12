@@ -174,7 +174,7 @@ strong, b {
     border-top: 1px solid #e3e3e3;
   }
 
-  #content section.content article div {
+  #content section.content article .speakerdeck {
     max-width:90%;
   }
 
@@ -388,6 +388,10 @@ strong, b {
   div#content section.content article{
     padding: 60px;
     border-left:0;
+  }
+
+  div#content section.content article .speakerdeck {
+    margin: 0 auto;
   }
 
   div#content section.content article div.highlight{
