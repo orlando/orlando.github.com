@@ -1,3 +1,3 @@
 #orlando.github.com
 
-check also [https://github.com/orlando/kudo_server](https://github.com/orlando/kudo_server).
+If you want to use this theme, please use [svbtle-jekyll](https://github.com/orlando/svbtle-jekyll).
