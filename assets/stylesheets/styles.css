@@ -772,7 +772,6 @@ nav.pagination span.next {
 	border: none;
 	margin: 15px auto;
   width: 100%;
-  white-space: pre-line;
 }
 
 .post.detail-view code {
@@ -894,7 +893,6 @@ nav.pagination span.next {
   opacity: 1;
 }
 
-
 .detail-view .tag-read-first {
   display: none;
   visibility: hidden;
@@ -983,7 +981,6 @@ nav.pagination span.next {
   100% {color: #F40000;}
 }
 
->>>>>>> 68ea6bcd6a2b3f983a1cad41a01717b1ac346cdd
 .instapaper,
 .next-article__content {
   font-size: 18px;
