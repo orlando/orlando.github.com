@@ -2,7 +2,7 @@ markdown: redcarpet
 pygments: true
 permalink: date
 lsi: true
-exclude: ['README.markdown', 'README_FOR_COLLABORATORS.markdown', 'Gemfile.lock', 'Gemfile']
+exclude: ['README.markdown', 'README_FOR_COLLABORATORS.markdown', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'LICENSE.txt']
 production: false
 paginate: 10
 

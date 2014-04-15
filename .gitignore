@@ -1,7 +1,10 @@
 _site/*
 _site
+.bundle/*
+_posts/*.markdown
 *.swp
 *.swo
-Gemfile
-Gemfile.lock
 .rvmrc
+.ruby-version
+.ruby-gemset
+.rbenv-gemsets

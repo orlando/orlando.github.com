@@ -54,8 +54,10 @@ window.Kudos.HTML =
     '<figure class="kudo able" id="">\
         <a href="#kudo">\
             <div class="filling">&nbsp;</div>\
-            <div class="num">1,172</div>\
-            <div class="txt">Kudos</div>\
+            <div class="kudo-info">\
+                <div class="num">1,172</div>\
+                <div class="txt">Kudos</div>\
+            </div>\
         </a>\
     </figure>\
     '
@@ -149,11 +151,13 @@ window.Kudos.prototype = {
 
     _fetchCount: function(){
         var kudo = this;
-        var item = window.Kudos.kudoData.filter(function (item) {
-            return item.article === kudo.articleId
-        })[0];
-        if (item) {
-            this.kudosCount = item.kudoCount;
+        if (window.Kudos.kudoData) {
+          var item = window.Kudos.kudoData.filter(function (item) {
+              return item.article === kudo.articleId
+          })[0];
+          if (item) {
+              this.kudosCount = item.kudoCount;
+          }
         }
     },
 
