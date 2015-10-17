@@ -1,0 +1,42 @@
+html,
+body,
+.main {
+  height:100%;
+}
+
+.main {
+  background: linear-gradient(45deg,
+    $light-pastel-purple,
+    $portage,
+    $reef,
+    $aqua,
+    $tea-green,
+    $sundown,
+    $red-orange,
+    $gold
+  );
+  background-size: 1600% 1600%;
+  animation: background 120s ease infinite;
+  position: relative;
+  padding: $pad;
+}
+
+.name {
+  display: inline-block;
+  color: $white;
+  font-size: 4rem;
+  margin: $space/4 0;
+  padding: 0 $pad/2;
+  letter-spacing: -2px;
+  background-color: $black;
+
+  @media screen and (max-width: 720px) {
+    font-size: 3rem;
+  }
+}
+
+@keyframes background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}

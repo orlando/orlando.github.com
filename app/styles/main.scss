@@ -1,0 +1,24 @@
+// bower:scss
+// endbower
+
+@import "/bower_components/normalize-css/normalize.css";
+
+/*
+ * BASE
+ */
+@import "fonts--icomoon";
+@import "generics--base";
+@import "tools--helpers";
+@import "settings--variables";
+@import "settings--palette";
+
+/*
+ * OBJECTS
+ */
+@import "objects--avatar";
+@import "objects--footer";
+
+/*
+ * LAYOUTS
+ */
+@import "layouts--main";

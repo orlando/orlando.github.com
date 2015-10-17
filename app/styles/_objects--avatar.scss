@@ -1,0 +1,18 @@
+/*
+ * VARIABLES
+ */
+$size--avatar-desktop: 250px;
+
+/*
+ * AVATAR
+ */
+.avatar {
+  height: $size--avatar-desktop;
+  width: $size--avatar-desktop;
+  border-radius: 50%;
+
+  @media screen and (max-width: 720px) {
+  height: $size--avatar-desktop / 2;
+  width: $size--avatar-desktop / 2;
+  }
+}

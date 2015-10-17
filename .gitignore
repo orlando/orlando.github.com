@@ -1,10 +1,6 @@
-_site/*
-_site
-.bundle/*
-_posts/*.markdown
-*.swp
-*.swo
-.rvmrc
-.ruby-version
-.ruby-gemset
-.rbenv-gemsets
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components
+test/bower_components

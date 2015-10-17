@@ -1,0 +1,17 @@
+.footer {
+  position: absolute;
+  right: $pad;
+  bottom: $pad;
+
+  > a {
+    font-size: 1.25rem;
+    color: $black;
+    margin-right: $space/2;
+    text-decoration: none;
+    transition: all 100ms ease-in-out;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

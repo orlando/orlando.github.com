@@ -1,0 +1,7 @@
+@each $name, $value in (sm: 1rem) {
+  @each $property in (bottom) {
+    .margin-#{$property}-#{$name} {
+      margin-#{$property}: $value;
+    }
+  }
+}
