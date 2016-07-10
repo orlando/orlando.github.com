@@ -15,43 +15,45 @@
   </head>
   <body>
     <main class="main">
-      <img alt="orlando del aguila" class="avatar" src="https://en.gravatar.com/userimage/23056515/812e7098ae0aafa7035a715d4e8f1e3e.jpg?size=200" />
-      <h1 class="title">Orlando Del Aguila</h1>
-      <p class="subtitle">Venezuelan, Software Engineer, Traveler</p>
+      <div class="person" itemscope itemtype="https://schema.org/Person">
+        <img alt="orlando del aguila" class="avatar" src="https://en.gravatar.com/userimage/23056515/812e7098ae0aafa7035a715d4e8f1e3e.jpg?size=200" />
+        <h1 class="title" itemprop="name">Orlando Del Aguila</h1>
+        <p class="subtitle" temprop="jobtitle">Venezuelan, Software Engineer, Traveler</p>
 
-      <div class="networks">
-        <a target="_blank" class="network" href="https://www.instagram.com/eatcodetravel">
-          <i class="icon-instagram"></i>
-        </a>
-        <a target="_blank" class="network" href="https://www.twitter.com/eatcodetravel">
-          <i class="icon-twitter"></i>
-        </a>
-        <a target="_blank" class="network" href="https://www.facebook.com/odelaguila">
-          <i class="icon-facebook-official"></i>
-        </a>
-        <a target="_blank" class="network" href="https://www.medium.com/eat-code-travel">
-          <i class="icon-medium"></i>
-        </a>
-        <a target="_blank" class="network" href="https://www.github.com/orlando">
-          <i class="icon-github-circled"></i>
-        </a>
-        <a target="_blank" class="network" href="https://careers.stackoverflow.com/orlando">
-          <i class="icon-stackoverflow"></i>
-        </a>
-        <a target="_blank" class="network" href="https://www.speakerdeck.com/orlando">
-          <i class="icon-speakerdeck"></i>
-        </a>
-        <a target="_blank" class="network" href="https://www.linkedin.com/in/orlandodelaguila">
-          <i class="icon-linkedin"></i>
-        </a>
-        <a class="network" href="mailto:orlando@orlandodelaguila.com">
-          <i class="icon-mail-alt"></i>
-        </a>
+        <div class="networks">
+          <a target="_blank" class="network" href="https://www.instagram.com/eatcodetravel">
+            <i class="icon-instagram"></i>
+          </a>
+          <a target="_blank" class="network" href="https://www.twitter.com/eatcodetravel">
+            <i class="icon-twitter"></i>
+          </a>
+          <a target="_blank" class="network" href="https://www.facebook.com/odelaguila">
+            <i class="icon-facebook-official"></i>
+          </a>
+          <a target="_blank" class="network" href="https://www.medium.com/eat-code-travel">
+            <i class="icon-medium"></i>
+          </a>
+          <a target="_blank" class="network" href="https://www.github.com/orlando">
+            <i class="icon-github-circled"></i>
+          </a>
+          <a target="_blank" class="network" href="https://careers.stackoverflow.com/orlando">
+            <i class="icon-stackoverflow"></i>
+          </a>
+          <a target="_blank" class="network" href="https://www.speakerdeck.com/orlando">
+            <i class="icon-speakerdeck"></i>
+          </a>
+          <a target="_blank" class="network" href="https://www.linkedin.com/in/orlandodelaguila">
+            <i class="icon-linkedin"></i>
+          </a>
+          <a class="network" itemprop="email" href="mailto:orlando@orlandodelaguila.com">
+            <i class="icon-mail-alt"></i>
+          </a>
+        </div>
       </div>
     </main>
-    <canvas class="background"></canvas>
+    <canvas id="background" class="background"></canvas>
 
-    <script src="js/main.js"></script>
+    <script src="scripts/main.js"></script>
     <script>
       window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
       ga('create','UA-67808453-2','auto');ga('send','pageview')
